@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #212329;
+  color: white;
+}
+body._lock {
+  overflow: hidden;
+}
+
+.App {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page {
+  flex: 1 0 auto;
+  flex-grow: 1;
+  padding: 80px 0 10px 0;
+}
+
+.separator {
+  height: 2px;
+  border-radius: 1px;
+  background-color: #c2c9d5;
+  border: none;
+  margin: 0 1rem;
+}
+
+.footer {
+  width: 100%;
+  flex: 0 0 auto;
+  padding: 0.5rem;
+}
+
+.footer-text {
+  text-align: center;
+  margin: 0.2rem 1rem 0rem 1rem;
+  color: #898989;
+}
+
+.footer-text img {
+  height: 44px;
+}
+
+.footer-text-foolish {
+  text-align: center;
+  font-size: 12px;
+  color: #898989;
+}
