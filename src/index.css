@@ -65,7 +65,7 @@ body._lock {
 .page {
   flex: 1 0 auto;
   flex-grow: 1;
-  padding: 80px 0 10px 0;
+  padding: 60px 0 10px 0;
 }
 
 .separator {
@@ -84,7 +84,7 @@ body._lock {
 
 .footer-text {
   text-align: center;
-  margin: 0.2rem 1rem 0rem 1rem;
+  margin: 0.4rem 1rem 0.3rem 1rem;
   color: #898989;
 }
 
@@ -96,4 +96,88 @@ body._lock {
   text-align: center;
   font-size: 12px;
   color: #898989;
+}
+
+.home-button {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.home-button-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---- Main Page ---- */
+
+.main-page-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem
+}
+
+.main-page-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem;
+  padding: 2rem;
+  border: white solid 2px;
+  border-radius: 16px;
+  text-align: justify;
+  font-size: 18px;
+
+}
+
+.three-blocks-title {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.three-blocks {
+  display: flex;
+  flex-direction: row;
+}
+
+.link-block {
+  text-decoration: none;
+  color: white;
+  flex: 0 1 33%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.button-block {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 0 1rem;
+  line-height: 200px;
+  border: transparent solid 2px;
+  border-radius: 16px;
+  height: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.studying-block {
+  background-color: #318CE7;
+}
+
+.training-block {
+  background-color: #09BD09;
+}
+
+.playing-block {
+  background-color: #F0782D;
 }
