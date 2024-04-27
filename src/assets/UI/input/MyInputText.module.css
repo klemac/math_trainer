@@ -1,0 +1,12 @@
+.myInput {
+    width: 120px;
+    padding: 5px 5px;
+    margin: 5px 0;
+    border-bottom: 0px solid gray;
+    border-radius: 2px;
+    font-size: 18px;
+  }
+
+textarea:focus, input:focus{
+    outline: none;
+  }

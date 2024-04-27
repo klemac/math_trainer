@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <div className="wrapper">
-        <Link to='/' className="home-button-link"><i class="material-icons home-button">home</i></Link>
+        <Link to='/' className="home-button-link"><i className="material-icons home-button">home</i></Link>
           <main className="page">
             <Routes>
               <Route path="*" element={<NotFound />} />

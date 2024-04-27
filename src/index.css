@@ -46,7 +46,7 @@ body._lock {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-width: 100%
+  min-width: 100%;
 }
 
 .wrapper {
@@ -116,7 +116,7 @@ body._lock {
 .main-page-block {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem
+  gap: 1.5rem;
 }
 
 .main-page-info {
@@ -129,7 +129,6 @@ body._lock {
   border-radius: 16px;
   text-align: justify;
   font-size: 18px;
-
 }
 
 .three-blocks-title {
@@ -165,19 +164,117 @@ body._lock {
   border: transparent solid 2px;
   border-radius: 16px;
   height: 200px;
-  cursor: pointer;
   text-decoration: none;
   vertical-align: middle;
 }
 
 .studying-block {
-  background-color: #318CE7;
+  background-color: #318ce7;
 }
 
 .training-block {
-  background-color: #09BD09;
+  background-color: #09bd09;
 }
 
 .playing-block {
-  background-color: #F0782D;
+  background-color: #f0782d;
+}
+
+/* ----- Training ----- */
+
+.training-page-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.training-settings-block {
+  flex: 0 1 50%;
+}
+
+.training-solve-block {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.item-body {
+  width: 440px;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  border: transparent solid 1px;
+  border-radius: 10px;
+  background-color: #464a55;
+}
+
+.item-left-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  width: 220px;
+}
+
+.item-right-block {
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-expression {
+  font-size: 24px;
+  text-align: center;
+}
+
+.text-good {
+  color: #09bd09
+}
+
+.text-bad {
+  color: #f0782d;
+}
+
+.solution-block {
+  font-size: 20px;
+}
+
+/* ----- Playing ------- */
+
+.playing-rigth-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-points-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 1rem 0.5rem 1rem;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ---- Stats ----- */
+
+.names-block {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 18px;
+}
+
+.values-block {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: 18px;
 }
