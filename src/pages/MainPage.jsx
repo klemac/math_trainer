@@ -15,7 +15,7 @@ const MainPage = () => {
           двойки" и многие другие. Вы также можете предложить свои идеи для
           развития программы, написав мне на почту:
         </p>
-        <p>konnov_i_g@mail.ru</p>
+        <p>konnov_i_g@gmail.com</p>
       </div>
       <div className="main-page-three-blocks">
         <div className="three-blocks-title">Выберите режим</div>
