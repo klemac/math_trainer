@@ -2,8 +2,9 @@ import React from 'react';
 
 const StudyingPage = () => {
     return (
-        <div>
-            
+        <div className='studying-page-block container'>
+            <div className="page-title">Справочник</div>
+            <div className="temporary-text">В будущем здесь появятся обучающие материалы</div>
         </div>
     );
 }

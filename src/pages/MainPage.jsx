@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const MainPage = () => {
   return (
     <div className="container main-page-block">
+      <div className="page-title">Главная</div>
       <div className="main-page-info">
         <p>
           Данные математический тренажёр создан в качестве итогового проекта в

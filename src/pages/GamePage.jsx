@@ -236,89 +236,99 @@ const GamePage = () => {
   };
 
   return (
-    <div className="training-page-block container">
-      <div className="training-settings-block">
-        <div className="first-range-block">
-          Границы диапазона для первого числа:{"    "}
-          <MyInputText
-            type="text"
-            value={firstNumberLeft}
-            onChange={handleChange}
-            autoComplete="off"
-          />
-          {"     -     "}
-          <MyInputText
-            type="text"
-            value={firstNumberRight}
-            onChange={handleChange2}
-            autoComplete="off"
-          />
-        </div>
-        <div className="second-range-block">
-          Границы диапазона для второго числа:{"    "}
-          <MyInputText
-            type="text"
-            value={secondNumberLeft}
-            onChange={handleChange3}
-            autoComplete="off"
-          />
-          {"     -     "}
-          <MyInputText
-            type="text"
-            value={secondNumberRight}
-            onChange={handleChange4}
-            autoComplete="off"
-          />
-        </div>
-        <div className="quantity-block">
-          Время игры в секундах (не более 3600): {"   "}
-          <MyInputText
-            type="text"
-            value={timing}
-            onChange={handleChange5}
-            autoComplete="off"
-          />
-        </div>
-        <div className="checkbox-block">
-          {actions.map(({ name, index }) => (
-            <MyInputCheckbox
-              key={`custom-checkbox-${index}`}
-              naming={`custom-checkbox-${index}`}
-              id={`custom-checkbox-${index}`}
-              name={name}
-              value={name}
-              checked={checkedState[index]}
-              onChange={() => handleOnChange(index)}
+    <>
+      {" "}
+      <div className="page-title">Игра на время</div>
+      <div className="training-page-block container">
+        <div className="training-settings-block">
+          <div className="first-range-block">
+            Границы диапазона для первого числа:{"    "}
+            <MyInputText
+              type="text"
+              value={firstNumberLeft}
+              onChange={handleChange}
+              autoComplete="off"
             />
-          ))}
-        </div>
-        <div className="button-block">
-          <MyButton onClick={createData}>Старт</MyButton>
-        </div>
-      </div>
-      <div className="playing-rigth-block">
-        {/* <div>{over ? "Time's up!" : ""}</div> */}
-        {firstLoad ? (
-          ""
-        ) : (
-          <div className="timer-points-block">
-            <div className="timer-block">Время: {s}</div>
-            <div className="points-block">{points}</div>
+            {"     -     "}
+            <MyInputText
+              type="text"
+              value={firstNumberRight}
+              onChange={handleChange2}
+              autoComplete="off"
+            />
           </div>
-        )}
-        {over ? (
-           <>{ firstLoad ? "" : <StatsBlock time={timing} tasks={taskNumber} correct={points}/> }</> 
-        ) : (
-          <PlayingBlock
-            trainingData={trainingData}
-            key={trainingKey}
-            createData={createData2}
-            setPoints={setPoints}
-            setTasks={setTaskNumber}
-          />
-        )}
+          <div className="second-range-block">
+            Границы диапазона для второго числа:{"    "}
+            <MyInputText
+              type="text"
+              value={secondNumberLeft}
+              onChange={handleChange3}
+              autoComplete="off"
+            />
+            {"     -     "}
+            <MyInputText
+              type="text"
+              value={secondNumberRight}
+              onChange={handleChange4}
+              autoComplete="off"
+            />
+          </div>
+          <div className="quantity-block">
+            Время игры в секундах (не более 3600): {"   "}
+            <MyInputText
+              type="text"
+              value={timing}
+              onChange={handleChange5}
+              autoComplete="off"
+            />
+          </div>
+          <div className="checkbox-block">
+            {actions.map(({ name, index }) => (
+              <MyInputCheckbox
+                key={`custom-checkbox-${index}`}
+                naming={`custom-checkbox-${index}`}
+                id={`custom-checkbox-${index}`}
+                name={name}
+                value={name}
+                checked={checkedState[index]}
+                onChange={() => handleOnChange(index)}
+              />
+            ))}
+          </div>
+          <div className="button-block">
+            <MyButton onClick={createData}>Старт</MyButton>
+          </div>
+        </div>
+        <div className="playing-rigth-block">
+          {/* <div>{over ? "Time's up!" : ""}</div> */}
+          {firstLoad ? (
+            ""
+          ) : (
+            <div className="timer-points-block">
+              <div className="timer-block">Время: {s}</div>
+              <div className="points-block">{points}</div>
+            </div>
+          )}
+          {over ? (
+            <>
+              {firstLoad ? (
+                ""
+              ) : (
+                <StatsBlock time={timing} tasks={taskNumber} correct={points} />
+              )}
+            </>
+          ) : (
+            <PlayingBlock
+              trainingData={trainingData}
+              key={trainingKey}
+              createData={createData2}
+              setPoints={setPoints}
+              setTasks={setTaskNumber}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

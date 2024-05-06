@@ -137,68 +137,72 @@ const TrainPage = () => {
   };
 
   return (
-    <div className="training-page-block container">
-      <div className="training-settings-block">
-        <div className="first-range-block">
-          Границы диапазона для первого числа:{"    "}
-          <MyInputText
-            type="text"
-            value={firstNumberLeft}
-            onChange={handleChange}
-            autoComplete="off"
-          />
-          {"     -     "}
-          <MyInputText
-            type="text"
-            value={firstNumberRight}
-            onChange={handleChange2}
-            autoComplete="off"
-          />
-        </div>
-        <div className="second-range-block">
-          Границы диапазона для второго числа:{"    "}
-          <MyInputText
-            type="text"
-            value={secondNumberLeft}
-            onChange={handleChange3}
-            autoComplete="off"
-          />
-          {"     -     "}
-          <MyInputText
-            type="text"
-            value={secondNumberRight}
-            onChange={handleChange4}
-            autoComplete="off"
-          />
-        </div>
-        <div className="quantity-block">
-          Кол-во примеров (не более 100): {"   "}
-          <MyInputText
-            type="text"
-            value={quantity}
-            onChange={handleChange5}
-            autoComplete="off"
-          />
-        </div>
-        <div className="checkbox-block">
-          {actions.map(({ name, index }) => (
-            <MyInputCheckbox
-              key={`custom-checkbox-${index}`}
-              naming={`custom-checkbox-${index}`}
-              id={`custom-checkbox-${index}`}
-              name={name}
-              value={name}
-              checked={checkedState[index]}
-              onChange={() => handleOnChange(index)}
+    <>
+      {" "}
+      <div className="page-title">Тренировка</div>
+      <div className="training-page-block container">
+        <div className="training-settings-block">
+          <div className="first-range-block">
+            Границы диапазона для первого числа:{"    "}
+            <MyInputText
+              type="text"
+              value={firstNumberLeft}
+              onChange={handleChange}
+              autoComplete="off"
             />
-          ))}
+            {"     -     "}
+            <MyInputText
+              type="text"
+              value={firstNumberRight}
+              onChange={handleChange2}
+              autoComplete="off"
+            />
+          </div>
+          <div className="second-range-block">
+            Границы диапазона для второго числа:{"    "}
+            <MyInputText
+              type="text"
+              value={secondNumberLeft}
+              onChange={handleChange3}
+              autoComplete="off"
+            />
+            {"     -     "}
+            <MyInputText
+              type="text"
+              value={secondNumberRight}
+              onChange={handleChange4}
+              autoComplete="off"
+            />
+          </div>
+          <div className="quantity-block">
+            Кол-во примеров (не более 100): {"   "}
+            <MyInputText
+              type="text"
+              value={quantity}
+              onChange={handleChange5}
+              autoComplete="off"
+            />
+          </div>
+          <div className="checkbox-block">
+            {actions.map(({ name, index }) => (
+              <MyInputCheckbox
+                key={`custom-checkbox-${index}`}
+                naming={`custom-checkbox-${index}`}
+                id={`custom-checkbox-${index}`}
+                name={name}
+                value={name}
+                checked={checkedState[index]}
+                onChange={() => handleOnChange(index)}
+              />
+            ))}
+          </div>
+          <div className="button-block">
+            <MyButton onClick={createData}>Составить примеры</MyButton>
+          </div>
         </div>
-        <div className="button-block">
-          <MyButton onClick={createData}>Составить примеры</MyButton>
-        </div>
+        <SolvingBlock trainingData={trainingData} key={trainingKey} />
       </div>
-      <SolvingBlock trainingData={trainingData} key={trainingKey} />
-    </div>
+    </>
   );
 };
 
