@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/math_trainer/static/css/main.2d4b03d4.css",
+    "main.js": "/math_trainer/static/js/main.7201008d.js",
+    "static/media/619.png": "/math_trainer/static/media/619.c332af7573a6d26e303d.png",
+    "index.html": "/math_trainer/index.html",
+    "main.2d4b03d4.css.map": "/math_trainer/static/css/main.2d4b03d4.css.map",
+    "main.7201008d.js.map": "/math_trainer/static/js/main.7201008d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d4b03d4.css",
+    "static/js/main.7201008d.js"
+  ]
+}
