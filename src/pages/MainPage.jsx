@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const MainPage = () => {
   return (
     <div className="container main-page-block">
+      <div className="page-title">Главная</div>
       <div className="main-page-info">
         <p>
           Данные математический тренажёр создан в качестве итогового проекта в
@@ -15,7 +16,7 @@ const MainPage = () => {
           двойки" и многие другие. Вы также можете предложить свои идеи для
           развития программы, написав мне на почту:
         </p>
-        <p>konnov_i_g@mail.ru</p>
+        <p>konnov_i_g@gmail.com</p>
       </div>
       <div className="main-page-three-blocks">
         <div className="three-blocks-title">Выберите режим</div>
